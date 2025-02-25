@@ -41,6 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "interface FastEthernet0/$i\n switchport mode access\n switchport access vlan 4\n exit\n";
     }
     echo "end\n";
-    echo "write memory\n";
+
+    echo "<h3> Per guardar la configuració en mode privilegiat:</h3>";
+    echo "copy running-config startup-config\n";
     echo "</pre>";
 }
