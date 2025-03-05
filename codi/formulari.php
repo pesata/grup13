@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "<h2>Configuració generada:</h2>";
     echo "<pre>";
-    echo "<h3>Per entrar al mode privilegiat:</h3>";
+    echo "<h3>Per entrar al mode configuració global:</h3>";
     echo "enable\n";
     echo "configure terminal\n";
 
