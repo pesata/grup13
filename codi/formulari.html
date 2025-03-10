@@ -6,14 +6,14 @@
 </head>
 <body>
     <form method="post" action="formulari.php">
-        <label>Hostname 1: <input type="text" name="hostname" required></label><br>
+        <label>Hostname: <input type="text" name="hostname" required></label><br>
         <label>Contrasenya: <input type="password" name="password" required></label><br>
         <label>Nom VLAN 2: <input type="text" name="vlan2_name" required></label><br>
         <label>Nom VLAN 3: <input type="text" name="vlan3_name" required></label><br>
         <label>Nom VLAN 4: <input type="text" name="vlan4_name" required></label><br>
-        <label>Interfícies VLAN 2 (inici - final): <input type="number" name="vlan2_iface" required></label><br>
-        <label>Interfícies VLAN 3 (inici - final): <input type="number" name="vlan3_iface" required></label><br>
-        <label>Interfícies VLAN 4 (inici - final): <input type="number" name="vlan4_iface" required></label><br>
+        <label>Interfícies VLAN 2 (inici - final): <input type="number" name="vlan2_start" required> - <input type="number" name="vlan2_end" required></label><br>
+        <label>Interfícies VLAN 3 (inici - final): <input type="number" name="vlan3_start" required> - <input type="number" name="vlan3_end" required></label><br>
+        <label>Interfícies VLAN 4 (inici - final): <input type="number" name="vlan4_start" required> - <input type="number" name="vlan4_end" required></label><br>
         <button type="submit">Generar configuració</button>
     </form>
 </body>

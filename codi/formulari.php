@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hostname = htmlspecialchars($_POST["hostname"]);
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Encriptar la contraseña
+    $password = htmlspecialchars($_POST["password"]); // Encriptar la contraseña
     $vlan2_name = htmlspecialchars($_POST["vlan2_name"]);
     $vlan3_name = htmlspecialchars($_POST["vlan3_name"]);
     $vlan4_name = htmlspecialchars($_POST["vlan4_name"]);
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "<h2>Configuració generada:</h2>";
     echo "<pre>";
-    echo "<h3>Per entrar al mode configuració global:</h3>";
+    echo "<h3>Per entrar al mode privilegiat:</h3>";
     echo "enable\n";
     echo "configure terminal\n";
 
@@ -23,6 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "<h3>Per configurar la contrasenya:</h3>";
     echo "enable secret $password\n";
+
+    echo "<h3>Per encriptar la contrasenya:</h3>";
+    echo "service password-encryption\n";
 
     echo "<h3>Per configurar els noms de les VLANs:</h3>";
     echo "int vlan 2\n name $vlan2_name\n exit\n";
